@@ -6,7 +6,7 @@ The tool automatically detects the input file type and safely supports **FASTA-o
 
 ---
 
-## ✨ Features
+## Features
 
 * Automatic detection of **FASTA** and **FASTQ** files
 * Core sequence statistics:
@@ -26,7 +26,7 @@ The tool automatically detects the input file type and safely supports **FASTA-o
 
 ---
 
-## 🧪 Installation
+## Installation
 
 ### Requirements
 
@@ -49,7 +49,7 @@ cd ABUSEqQC
 
 ---
 
-## 🚀 Usage
+## Usage
 
 Run ABUSEqQC from the terminal:
 
@@ -75,7 +75,7 @@ The tool automatically detects the file type and applies the correct analysis.
 
 ---
 
-## 📄 Output Examples
+##  Output Examples
 
 ### FASTA output
 
@@ -110,7 +110,7 @@ Max Quality         : 41
 
 ---
 
-## 🧬 Use Cases
+## Use Cases
 
 * Genome assembly quality assessment
 * Pre-annotation sequence validation
@@ -120,7 +120,7 @@ Max Quality         : 41
 
 ---
 
-## 📚 Citation
+## Citation
 
 If you use **ABUSEqQC** in your research, please cite:
 
@@ -128,23 +128,22 @@ If you use **ABUSEqQC** in your research, please cite:
 
 ---
 
-## 🔮 Future Development
+##  Future Development
 
 * FASTQ quality score plots
 * Length distribution plots
 * HTML QC reports
-* Packaging for `pip install abuseqqc`
 * Unit tests and CI integration
 
 ---
 
-## 📜 License
+##  License
 
 This project is released under the **MIT License**.
 
 ---
 
-## 👤 Author
+##  Author
 
 **Abubakar Musoba**
 Molecular Biologist & Bioinformatician
