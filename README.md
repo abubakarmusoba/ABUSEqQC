@@ -1,40 +1,46 @@
 # ABUSEqQC
 
-**ABUSEqQC** is a lightweight, command-line quality control (QC) tool for **FASTA and FASTQ** sequence files, designed for molecular biologists and bioinformaticians working in low- and middle-resource laboratory environments. The tool provides essential sequence statistics commonly required before downstream analyses such as assembly, annotation, or comparative genomics.
+**ABUSEqQC** is a lightweight, command-line quality control (QC) tool for **FASTA and FASTQ** sequence files. It is designed for molecular biologists and bioinformaticians who need quick, reliable summary statistics before downstream analyses such as genome assembly, annotation, or comparative genomics.
 
-ABUSEqQC is written in **Python 3** and uses **Biopython**, making it easy to extend, audit, and integrate into existing bioinformatics workflows.
+The tool automatically detects the input file type and safely supports **FASTA-only statistics** as well as **FASTQ quality-score analysis**, without compromising either format.
 
 ---
 
-## Features
+## ✨ Features
 
-* Supports **FASTA (.fasta, .fa, .fna)** and **FASTQ (.fastq, .fq)** files
-* Calculates core QC statistics:
+* Automatic detection of **FASTA** and **FASTQ** files
+* Core sequence statistics:
 
   * Number of sequences
   * Minimum, maximum, and mean sequence length
   * **N50** statistic
   * GC content (%)
   * Ambiguous base (N) content (%)
-* Simple command-line interface (CLI)
-* Suitable for bacterial genomes, contigs, scaffolds, and raw reads
+* **FASTQ-only quality statistics**:
+
+  * Mean Phred quality score
+  * Minimum Phred quality score
+  * Maximum Phred quality score
+* Simple and reproducible **command-line interface (CLI)**
+* Built with **Python 3** and **Biopython**
 
 ---
 
-##  Installation
+## 🧪 Installation
 
-### 1️Requirements
+### Requirements
 
 * Python **≥ 3.8** (tested on Python 3.12)
 * Biopython
+* NumPy
 
-### 2️ Install Biopython
+### Install dependencies
 
 ```bash
-pip install biopython
+pip install biopython numpy
 ```
 
-### 3️ Clone the Repository
+### Clone the repository
 
 ```bash
 git clone https://github.com/abubakarmusoba/ABUSEqQC.git
@@ -43,23 +49,35 @@ cd ABUSEqQC
 
 ---
 
-## Usage
+## 🚀 Usage
 
-Run ABUSEqQC from the terminal using:
+Run ABUSEqQC from the terminal:
 
 ```bash
 python3 abuseqqc.py -i <input_file> -o <output_report.txt>
 ```
 
-### Example
+### Examples
+
+#### FASTA input
 
 ```bash
-python3 abuseqqc.py -i regan1.fna -o qc_report.txt
+python3 abuseqqc.py -i assembly.fna -o fasta_qc.txt
 ```
+
+#### FASTQ input
+
+```bash
+python3 abuseqqc.py -i reads.fastq -o fastq_qc.txt
+```
+
+The tool automatically detects the file type and applies the correct analysis.
 
 ---
 
-## Output Example
+## 📄 Output Examples
+
+### FASTA output
 
 ```
 FASTA/FASTQ QC REPORT
@@ -73,39 +91,54 @@ Gc Percent          : 33.0
 N Percent           : 0.0
 ```
 
+### FASTQ output
+
+```
+FASTA/FASTQ QC REPORT
+==============================
+Num Sequences       : 100000
+Min Length          : 100
+Max Length          : 151
+Mean Length         : 150.2
+N50                 : 151
+Gc Percent          : 52.3
+N Percent           : 0.1
+Mean Quality        : 34.6
+Min Quality         : 20
+Max Quality         : 41
+```
+
 ---
 
-##  Notes
-
-* FASTQ **quality score statistics** are not yet implemented and may be added in future versions.
-* Designed to work efficiently on standard desktop or laptop computers.
-
----
-
-## Intended Use Cases
+## 🧬 Use Cases
 
 * Genome assembly quality assessment
 * Pre-annotation sequence validation
-* Teaching bioinformatics fundamentals
-* QC for sequencing data in resource-limited settings
+* FASTQ read quality summarization
+* Teaching introductory bioinformatics
+* QC workflows in resource-limited laboratories
 
 ---
 
-## Citation
+## 📚 Citation
 
 If you use **ABUSEqQC** in your research, please cite:
 
-> Musoba, A. (2026). *ABUSEqQC: A lightweight FASTA/FASTQ quality control tool for molecular biology and bioinformatics*. GitHub repository: [https://github.com/abubakarmusoba/ABUSEqQC](https://github.com/abubakarmusoba/ABUSEqQC)
+> Musoba, A. (2026). *ABUSEqQC: A FASTA/FASTQ quality control tool with N50 and quality-score analysis*. GitHub repository: [https://github.com/abubakarmusoba/ABUSEqQC](https://github.com/abubakarmusoba/ABUSEqQC)
 
 ---
 
-##  Contributing
+## 🔮 Future Development
 
-Contributions, bug reports, and feature requests are welcome. Please open an issue or submit a pull request via GitHub.
+* FASTQ quality score plots
+* Length distribution plots
+* HTML QC reports
+* Packaging for `pip install abuseqqc`
+* Unit tests and CI integration
 
 ---
 
-##  License
+## 📜 License
 
 This project is released under the **MIT License**.
 
@@ -116,3 +149,4 @@ This project is released under the **MIT License**.
 **Abubakar Musoba**
 Molecular Biologist & Bioinformatician
 GitHub: [https://github.com/abubakarmusoba](https://github.com/abubakarmusoba)
+
