@@ -6,7 +6,7 @@ ABUSEqQC is written in **Python 3** and uses **Biopython**, making it easy to ex
 
 ---
 
-## ✨ Features
+## Features
 
 * Supports **FASTA (.fasta, .fa, .fna)** and **FASTQ (.fastq, .fq)** files
 * Calculates core QC statistics:
@@ -21,20 +21,20 @@ ABUSEqQC is written in **Python 3** and uses **Biopython**, making it easy to ex
 
 ---
 
-## 🧪 Installation
+##  Installation
 
-### 1️⃣ Requirements
+### 1️Requirements
 
 * Python **≥ 3.8** (tested on Python 3.12)
 * Biopython
 
-### 2️⃣ Install Biopython
+### 2️ Install Biopython
 
 ```bash
 pip install biopython
 ```
 
-### 3️⃣ Clone the Repository
+### 3️ Clone the Repository
 
 ```bash
 git clone https://github.com/abubakarmusoba/ABUSEqQC.git
@@ -43,7 +43,7 @@ cd ABUSEqQC
 
 ---
 
-## 🚀 Usage
+## Usage
 
 Run ABUSEqQC from the terminal using:
 
@@ -59,7 +59,7 @@ python3 abuseqqc.py -i regan1.fna -o qc_report.txt
 
 ---
 
-## 📄 Output Example
+## Output Example
 
 ```
 FASTA/FASTQ QC REPORT
@@ -75,14 +75,14 @@ N Percent           : 0.0
 
 ---
 
-## 📌 Notes
+##  Notes
 
 * FASTQ **quality score statistics** are not yet implemented and may be added in future versions.
 * Designed to work efficiently on standard desktop or laptop computers.
 
 ---
 
-## 🧬 Intended Use Cases
+## Intended Use Cases
 
 * Genome assembly quality assessment
 * Pre-annotation sequence validation
@@ -91,7 +91,7 @@ N Percent           : 0.0
 
 ---
 
-## 📚 Citation
+## Citation
 
 If you use **ABUSEqQC** in your research, please cite:
 
@@ -99,13 +99,13 @@ If you use **ABUSEqQC** in your research, please cite:
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions, bug reports, and feature requests are welcome. Please open an issue or submit a pull request via GitHub.
 
 ---
 
-## 📜 License
+##  License
 
 This project is released under the **MIT License**.
 
